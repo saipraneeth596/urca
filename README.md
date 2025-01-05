@@ -13,3 +13,7 @@ Building an AI-driven solution for stock analysis. The solution uses open source
 
 # LLD
 <img width="703" alt="image" src="https://github.com/user-attachments/assets/d37ab0d1-741b-4cc8-8db2-b625c6ee2a4d" />
+
+# Future Scope
+<img width="703" alt="image" src="https://github.com/user-attachments/assets/ebd1a8d0-fa00-4da8-864b-e872915d7b0d" />
+
