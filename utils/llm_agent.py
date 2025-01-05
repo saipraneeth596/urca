@@ -20,12 +20,14 @@ class LLM_Agent:
                 },
                 {
                     "role": "user",
-                    "content": f"Parse the following instruction: {instruction}"
+                    "content": f"Parse the following instruction and return the response in JSON format: {instruction}"
                 }
-            ],
-            "response_format": {"type": "json_object"}
+            ]
         }
         response = requests.post(self.api_url, headers=headers, json=payload)
+        logging.debug(f"Request Payload: {payload}")
+        logging.debug(f"Response Status Code: {response.status_code}")
+        logging.debug(f"Response Content: {response.content}")
         return self._handle_response(response)
 
     def _handle_response(self, response):
