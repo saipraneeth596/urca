@@ -1,0 +1,5 @@
+# region = "us-east-1"
+# instance_type = "t2.micro"
+# db_username = "prod_user"
+# db_password = "prod_password"
+# api_key = "prod_api_key"
