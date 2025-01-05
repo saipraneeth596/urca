@@ -17,3 +17,72 @@ Building an AI-driven solution for stock analysis. The solution uses open source
 ## Future Scope
 <img width="703" alt="image" src="https://github.com/user-attachments/assets/ebd1a8d0-fa00-4da8-864b-e872915d7b0d" />
 
+## pre requisities:
+
+Python 3.12
+Dependencies:
+--Pandas
+--requests
+--flask
+Terraform
+
+## request format:
+{
+  "user_input": "Do the analysis of the stocks for last 3 months Reliance, ONGC, Oil India, Indian Oil and HPC from NSE data and then let me know the rank wise stock performance based on their weekly return"
+}
+
+## response format :
+{
+    "data": {
+        "analysis": {
+            "exchange": "NSE",
+            "metric": "weekly return",
+            "period": "last 3 months",
+            "stocks": [
+                "Reliance",
+                "ONGC",
+                "Oil India",
+                "Indian Oil",
+                "HPC"
+            ]
+        },
+        "results": {
+            "rank_wise_performance": [
+                {
+                    "rank": 1,
+                    "stock": "Reliance",
+                    "weekly_return": 4.25
+                },
+                {
+                    "rank": 2,
+                    "stock": "HPC",
+                    "weekly_return": 4.01
+                },
+                {
+                    "rank": 3,
+                    "stock": "Oil India",
+                    "weekly_return": 3.52
+                },
+                {
+                    "rank": 4,
+                    "stock": "ONGC",
+                    "weekly_return": 3.15
+                },
+                {
+                    "rank": 5,
+                    "stock": "Indian Oil",
+                    "weekly_return": 2.81
+                }
+            ],
+            "weekly_return": {
+                "HPC": 4.01,
+                "Indian Oil": 2.81,
+                "ONGC": 3.15,
+                "Oil India": 3.52,
+                "Reliance": 4.25
+            }
+        },
+        "summary": "Based on the analysis of the last 3 months of NSE data, the rank wise stock performance is led by Reliance with a weekly return of 4.25, followed by HPC with a weekly return of 4.01. Oil India, ONGC, and Indian Oil have weekly returns of 3.52, 3.15, and 2.81 respectively."
+    },
+    "response": "success"
+}
